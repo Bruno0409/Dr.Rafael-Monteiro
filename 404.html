@@ -1,0 +1,158 @@
+<!-- Casos Reais Start -->
+<section class="casos-reais">
+  <div class="container-fluid py-5">
+    <div class="container">
+      <h1 class="mb-4">Casos Reais</h1>
+      <h5 class="mb-5">
+        Transformações que mostram a nossa dedicação à estética e ao bem-estar
+        dos pacientes.
+      </h5>
+
+      <div class="row g-5">
+        <!-- Caso 1 -->
+        <div class="col-lg-4">
+          <div class="before-after-slider">
+            <div class="before-after-img">
+              <img
+                src="img/caso1-antes.jpg"
+                alt="Antes do procedimento"
+                class="img-fluid"
+              />
+              <img
+                src="img/caso1-depois.jpg"
+                alt="Depois do procedimento"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Caso 2 -->
+        <div class="col-lg-4">
+          <div class="before-after-slider">
+            <div class="before-after-img">
+              <img
+                src="img/caso2-antes.jpg"
+                alt="Antes do procedimento"
+                class="img-fluid"
+              />
+              <img
+                src="img/caso2-depois.jpg"
+                alt="Depois do procedimento"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Caso 3 -->
+        <div class="col-lg-4">
+          <div class="before-after-slider">
+            <div class="before-after-img">
+              <img
+                src="img/caso3-antes.jpg"
+                alt="Antes do procedimento"
+                class="img-fluid"
+              />
+              <img
+                src="img/caso3-depois.jpg"
+                alt="Depois do procedimento"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Casos Reais End -->
+
+<!-- CSS e JS -->
+<style>
+  .casos-reais h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .casos-reais h5 {
+    font-size: 20px;
+    color: #666;
+  }
+
+  .before-after-slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .before-after-img {
+    position: relative;
+  }
+
+  .before-after-img img {
+    width: 100%;
+    display: block;
+  }
+
+  .before-after-img img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: inset(
+      0 50% 0 0
+    ); /* Começa com a metade da imagem 'depois' invisível */
+  }
+
+  /* Estilos da barra de arraste */
+  .before-after-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #ff5a5f; /* Cor da barra */
+    cursor: ew-resize;
+  }
+
+  .before-after-img.dragging::before {
+    cursor: grabbing;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .casos-reais h1 {
+      font-size: 28px;
+    }
+    .casos-reais h5 {
+      font-size: 18px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll(".before-after-img").forEach(function (slider) {
+    const beforeAfterImg = slider.querySelector("img:nth-child(2)");
+    const beforeAfterBar = slider.querySelector("::before");
+    let isMouseDown = false;
+
+    // Adiciona o evento de clique e arraste
+    beforeAfterBar.addEventListener("mousedown", function (e) {
+      isMouseDown = true;
+      document.body.style.userSelect = "none"; // Previne seleção de texto
+    });
+
+    document.addEventListener("mousemove", function (e) {
+      if (isMouseDown) {
+        const sliderWidth = slider.offsetWidth;
+        let offsetX = e.pageX - slider.offsetLeft;
+        offsetX = Math.min(Math.max(0, offsetX), sliderWidth); // Limita o deslocamento
+        beforeAfterImg.style.clipPath = `inset(0 ${
+          100 - (offsetX / sliderWidth) * 100
+        }% 0 0)`;
+      }
+    });
+
+    document.addEventListener("mouseup", function () {
+      isMouseDown = false;
+      document.body.style.userSelect = ""; // Restaura a seleção de texto
+    });
+  });
+</script>
