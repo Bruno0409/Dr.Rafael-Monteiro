@@ -387,14 +387,14 @@ h1.display {
 }
 
 .fundo {
-    background-image: url('../img/fundoluz.webp');
+    background-image: url('../img/fundoluz1.webp');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-size: cover; /* Faz a imagem cobrir toda a área do elemento */
     background-position: center; /* Centraliza a imagem dentro do elemento */
 }
 
 .fundo2 {
-    background-image: url('../img/fundo2.webp');
+    background-image: url('../img/fundoluz2.webp');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-size: cover; /* Faz a imagem cobrir toda a área do elemento */
     background-position: center; /* Centraliza a imagem dentro do elemento */
