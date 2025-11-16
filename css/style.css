@@ -55,6 +55,10 @@ p, h6 {
     color: #FFF;
 }
 
+body {
+  background-color: #091B36;
+}
+
 /* Estilo para os ícones */
 i {
     font-family: "Font Awesome 5 Free"; /* Certificando-se de que o ícone está sendo aplicado corretamente */
@@ -390,15 +394,17 @@ h1.display {
     background-image: url('../img/fundoluz.png');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-size: cover; /* Faz a imagem cobrir toda a área do elemento */
-    background-position: center; /* Centraliza a imagem dentro do elemento */
+    background-position: calc(0% - 70px) calc(0% - 70px); /* Desloca a imagem ainda mais para cima e para a esquerda */
 }
 
 .fundo2 {
     background-image: url('../img/fundo2.png');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-size: cover; /* Faz a imagem cobrir toda a área do elemento */
-    background-position: center; /* Centraliza a imagem dentro do elemento */
+    background-position: calc(0% - 70px) calc(0% - 70px); /* Desloca a imagem ainda mais para cima e para a esquerda */
 }
+
+
 
 
 .casos-reais h5 {
