@@ -80,7 +80,7 @@ i {
     background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave */
     background-clip: text; /* Aplica o gradiente no ícone */
     -webkit-background-clip: text; /* Para navegadores Webkit */
-    font-size: 1.5em; 
+    font-size: 1.5em;
 }
 
 .btn.botao-metalico {
@@ -273,13 +273,13 @@ h1.display {
     .hero-header {
         background-position: 57% center;  /* Ajusta a imagem para mais à esquerda */
         height: 150vh;
-        
+
     }
     h1.display {
-        margin-top: 280px;  /* Adjusts the margin-top for better positioning */
-        font-size: 3.4rem;  /* Smaller font size for better readability */
+        margin-top: 140px;  /* Adjusts the margin-top for better positioning */
+        font-size: 2.7rem;  /* Smaller font size for better readability */
     }
-    
+
 }
 
 
@@ -385,7 +385,7 @@ h1.display {
     z-index: 1;
 }
 
-/*** Service Section ***/
+/* ** Service Section **
 .service-item {
     position: relative;
     padding: 30px 25px;
@@ -445,9 +445,32 @@ h1.display {
 .service-item.bg-light:hover .service-img h3 {
     background: var(--bs-primary);
     color: var(--bs-white);
+} */
+
+
+/* Garantir que as imagens dentro do .before-after-img tenham o mesmo tamanho */
+.before-after-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-/*** Team Section ***/
+.before-after-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que as imagens cubram o espaço sem distorcer */
+  display: block;
+}
+
+/* Opcional: Definir uma altura fixa para os sliders para garantir consistência */
+.before-after-slider {
+  height: 400px;  /* Ajuste a altura conforme necessário */
+  overflow: hidden; /* Garante que as imagens não ultrapassem os limites */
+}
+
+
+/*
+** Team Section **
 .team-item img {
     transition: .5s;
 }
@@ -478,7 +501,7 @@ h1.display {
     background: var(--bs-primary);
 }
 
-/*** Testimonial Section ***/
+** Testimonial Section **
 .testimonial-img {
     position: relative;
     padding: 45px 0 45px 90px;
@@ -516,9 +539,9 @@ h1.display {
     height: 17px;
     bottom: 0;
     right: 0;
-    left: auto;
-}
+    left: auto; */
 
+/*
 .testimonial-carousel .owl-dot {
     position: relative;
     display: inline-block;
@@ -545,7 +568,7 @@ h1.display {
         margin-right: 10px;
         margin-left: 0;
     }
-}
+} */
 
 
 /* Inicialmente, a navbar tem um fundo sólido */
@@ -576,7 +599,7 @@ h1.display {
 
 .casos-reais h5 {
     font-size: 20px;
-    color: #FFF; 
+    color: #FFF;
 }
 
 .before-after-slider {
