@@ -1,30 +1,25 @@
-/********** Template CSS **********/
-
-/* Definindo variáveis de cores no :root */
 :root {
     /* Cores principais */
-    --bs-primary: #007bff;   /* Cor primária (exemplo: azul) */
-    --bs-secondary: #6c757d; /* Cor secundária (exemplo: cinza) */
-    --bs-light: #f8f9fa;     /* Cor de fundo claro */
-    --bs-dark: #343a40;      /* Cor de fundo escuro */
-    --bs-white: #ffffff;     /* Cor branca */
-    --bs-success: #28a745;   /* Cor de sucesso (verde) */
-    --bs-danger: #dc3545;    /* Cor de erro (vermelho) */
-    --bs-warning: #ffc107;   /* Cor de aviso (amarelo) */
-    --bs-info: #17a2b8;      /* Cor de informação (ciano) */
-    --bs-muted: #6c757d;     /* Cor de texto desativado */
-    --bs-light-gray: #f4f4f4; /* Cor de cinza claro */
-    --bs-dark-gray: #343a40; /* Cor de cinza escuro */
-    --bs-transparent: rgba(0, 0, 0, 0); /* Cor transparente */
+    --cor-principal: #091B36;
+    --cor-secundaria: #696969;
+    --cor-destaque: #e0e0e0;
+    --cor-clara: #FFF;
+    --cor-escura: #072648;
+
+    /* Gradientes */
+    --gradiente-metalico: linear-gradient(45deg, var(--cor-secundaria), var(--cor-destaque), #979797);
+    --gradiente-claro: linear-gradient(45deg, #d1d1d1 25%, #e3e3e3 50%, #d1d1d1 75%);
+    --gradiente-brilhante: linear-gradient(45deg, #d1d1d1, var(--cor-destaque), #b0b0b0);
+
+    /* Fontes */
+    --font-principal: 'Optima', sans-serif;
+    --font-secundaria: 'Space Grotesk', sans-serif;
 }
-
-/* Agora as cores definidas em :root podem ser usadas em todo o CSS */
-
 
 
 .corprincipal {
-    background-color: #091B36!important;
-    color: var(--bs-white) !important;
+    background-color: var(--cor-principal)!important;
+    color: var(--cor-clara)!important;
 }
 
 /*** Spinner ***/
@@ -46,13 +41,13 @@ h1, h5 {
     font-family: 'Optima', sans-serif;
     color: transparent;
     font-weight: normal;
-    background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave e mais claro */
+    background: var(--gradiente-metalico);
     background-clip: text;
     -webkit-background-clip: text;
 }
 
 p, h6 {
-    color: #FFF;
+    color: var(--cor-clara);
 }
 
 /* Estilo para os ícones */
@@ -60,7 +55,7 @@ i {
     font-family: "Font Awesome 5 Free"; /* Certificando-se de que o ícone está sendo aplicado corretamente */
     font-weight: 900; /* Font Awesome usa "Font Awesome 5 Free" com peso 900 para ícones sólidos */
     color: transparent; /* Faz a cor do ícone transparente para exibir o gradiente */
-    background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave e mais claro */
+    background: var(--gradiente-metalico);
     background-clip: text; /* Aplica o gradiente ao texto */
     -webkit-background-clip: text; /* Compatibilidade com Webkit (Chrome, Safari) */
     display: inline-block; /* Garante que o ícone se comporte como texto */
@@ -69,33 +64,20 @@ i {
 /* Para quando os ícones estiverem em elementos com a classe 'fa' */
 .fa-check {
     color: transparent; /* Transparente para aplicar o gradiente */
-    background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave */
+    background: var(--gradiente-metalico);
     background-clip: text; /* Aplica o gradiente no ícone */
     -webkit-background-clip: text; /* Para navegadores Webkit */
     font-size: 1.5em;
 }
 
-.btn.botao-metalico {
-    position: relative;
-    padding: 16px 30px;
-    font-size: 18px;
-    font-weight: normal;
-    background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave de cinza */
-    color: #072648;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1); /* Sombras suaves para efeito de profundidade */
-}
 
 .btn.botao-metalico {
     position: relative;
     padding: 16px 30px;  /* Padding padrão para desktop */
     font-size: 18px;     /* Tamanho de fonte padrão */
     font-weight: normal;
-    background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave de cinza */
-    color: #072648;
+    background: var(--gradiente-metalico);
+    color: var(--cor-principal);
     border: none;
     cursor: pointer;
     outline: none;
@@ -112,9 +94,6 @@ i {
     }
 }
 
-
-
-
 /* Efeito de borda metálica inox discreto */
 .btn.botao-metalico::before {
     content: '';
@@ -124,7 +103,7 @@ i {
     right: -2px;
     bottom: -2px;
     border-radius: 5px;
-    background: linear-gradient(45deg, #d1d1d1 25%, #e3e3e3 50%, #d1d1d1 75%);
+    background: var(--gradiente-claro);
     background-size: 300% 300%;
     z-index: -1;
     animation: inox-glow 4s ease-in-out infinite;
@@ -142,13 +121,6 @@ i {
         background-position: 300% 300%;
     }
 }
-
-/* Efeito hover suave */
-.btn.botao-metalico:hover {
-    background-color: rgba(222, 222, 222, 1);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
 
 
 /*** Button Styles ***/
@@ -168,7 +140,7 @@ i {
     padding: 0;
     outline: none;
     color: transparent; /* Torna o texto transparente para aplicar o gradiente */
-    background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente metálico */
+    background:  var(--gradiente-metalico);
     background-clip: text; /* Aplica o gradiente diretamente nas letras */
     -webkit-background-clip: text; /* Garantir compatibilidade com navegadores Webkit */
     font-size: 16px; /* Ajuste de tamanho da fonte */
@@ -179,14 +151,14 @@ i {
 /* Efeito de hover */
 .navbar .navbar-nav .nav-link:hover {
     color: transparent; /* Mantém o gradiente metálico */
-    background: linear-gradient(45deg, #d1d1d1, #e3e3e3, #b0b0b0); /* Gradiente mais brilhante ao passar o mouse */
+    background:  var(--gradiente-metalico);
     background-clip: text; /* Mantém o gradiente nas letras */
     -webkit-background-clip: text; /* Compatibilidade */
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--bs-white);
+    color:  var(--cor-clara);
 }
 
 .navbar .dropdown-toggle::after {
@@ -200,7 +172,7 @@ i {
 
 .navbar .dropdown-menu .dropdown-item:hover,
 .navbar .dropdown-menu .dropdown-item.active {
-    color: var(--bs-white);
+    color:  var(--cor-clara);
     background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente suave e mais claro */
 }
 
@@ -383,7 +355,7 @@ h1.display {
 
 /* Quando o usuário rola a página */
 .sticky-top.transparent {
-    background-color: rgb(9, 27, 54); /* Fundo azul escuro com 70% de opacidade */
+    background-color: var(--cor-principal)
 }
 
 .fundo {
@@ -400,10 +372,14 @@ h1.display {
     background-position: center; /* Centraliza a imagem dentro do elemento */
 }
 
+body {
+  background-color: var(--cor-principal)
+}
+
 
 .casos-reais h5 {
     font-size: 20px;
-    color: #FFF;
+    color:var(--cor-clara)
 }
 
 .before-after-slider {
@@ -434,7 +410,7 @@ h1.display {
     left: 50%;
     width: 4px; /* Mais larga para ser mais visível */
     height: 100%;
-    background-color: #091B36; /* Azul */
+    background-color: var(--cor-principal);
     cursor: ew-resize;
     z-index: 10;
     display: flex;
@@ -449,8 +425,8 @@ h1.display {
     display: block;
     width: 20px;   /* largura da seta */
     height: 20px;  /* altura da seta */
-    border-top: 3px solid #091B36;
-    border-right: 3px solid #091B36;
+    border-top: 3px solid var(--cor-principal);
+    border-right: 3px solid var(--cor-principal);
     transform: rotate(-45deg); /* seta para direita */
     position: absolute;
     opacity: 0.5; /* 50% transparente */
@@ -469,19 +445,18 @@ h1.display {
 
 /* Estilo dos botões do acordeão */
 .accordion-button {
-  color: #091B36; /* Cor do texto azul escuro */
-  background-color: #f8f9fa; /* Fundo claro */
-  border: 1px solid #091B36; /* Borda azul escuro */
+  color: var(--cor-principal);
+  background-color: var(--cor-clara);
+  border: 1px solid var(--cor-principal);
   box-shadow: none; /* Remover sombra */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Suavizar as transições */
 }
 
 /* Estilo quando o acordeão estiver expandido */
 .accordion-button:not(.collapsed) {
-  background: linear-gradient(45deg, #696969, #e0e0e0, #979797); /* Gradiente metálico */
-  color: #091B36; /* Cor azul escuro quando expandido */
+  background: var(--gradiente-metalico);
+  color: var(--cor-principal);
   border-color: transparent !important; /* Remover borda quando expandido */
-  background-color: #e7f1ff !important; /* Fundo azul claro */
 }
 
 /* Estilo para a seta do acordeão */
@@ -491,17 +466,17 @@ h1.display {
 
 /* Estilo para a seta quando o acordeão está fechado */
 .accordion-button.collapsed::after {
-  color: #091B36 !important; /* Cor da seta quando fechado */
+  color: var(--cor-principal);
 }
 
 /* Estilo das respostas (cor do texto) */
 .accordion-body {
-  color: #091B36; /* Cor azul escuro para as respostas */
+  color: var(--cor-principal);
 }
 
 /* Borda dos itens de acordeão */
 .accordion-item {
-  border: 1px solid #091B36; /* Borda azul escuro para o acordeão */
+  border: 1px solid var(--cor-principal);
 }
 
 /* Remover a borda quando o acordeão está aberto */
@@ -511,23 +486,23 @@ h1.display {
 
 /* Estilo do fundo do acordeão quando fechado */
 .accordion-button {
-  background-color: #f8f9fa !important; /* Fundo claro */
+  background-color: var(--cor-clara);
 }
 
 /* Estilo para quando o acordeão está aberto */
 .accordion-button:not(.collapsed) {
-  border: 1px solid #091B36 !important; /* Borda azul escuro quando aberto */
-  background-color: #e7f1ff !important; /* Fundo azul claro */
+  border: 1px solid var(--cor-principal);
+  background-color: var(--cor-clara);
 }
 
 
 /* Estilos para o Copyright */
 .copyright {
-  background-color: #000; /* Fundo preto */
-  color: #fff; /* Texto branco */
+  background-color: #181818; /* Fundo preto */
+  color: var(--cor-clara);
 }
 
 .copyright a {
-  color: #fff; /* Link branco */
+  color: var(--cor-clara);
 }
 
