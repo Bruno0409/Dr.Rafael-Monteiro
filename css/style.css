@@ -16,6 +16,9 @@
     --font-secundaria: 'Space Grotesk', sans-serif;
 }
 
+#especialidades {
+  scroll-margin-top: 50px; /* ajuste conforme a altura do seu header */
+}
 
 .corprincipal {
     background-color: var(--cor-principal)!important;
