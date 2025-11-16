@@ -239,8 +239,8 @@ h1.display {
 
     }
     h1.display {
-        margin-top: 100px;  /* Adjusts the margin-top for better positioning */
-        font-size: 2.7rem;  /* Smaller font size for better readability */
+        margin-top: 180px;  /* Adjusts the margin-top for better positioning */
+        font-size: 2.4rem;  /* Smaller font size for better readability */
     }
 
 }
