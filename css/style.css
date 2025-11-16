@@ -521,3 +521,13 @@ h1.display {
 }
 
 
+/* Estilos para o Copyright */
+.copyright {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+}
+
+.copyright a {
+  color: #fff; /* Link branco */
+}
+
