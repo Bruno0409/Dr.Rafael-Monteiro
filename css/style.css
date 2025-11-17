@@ -347,7 +347,7 @@ i {
 }
 
 .fundo {
-    background-image: url('../img/fundoluz1.webp');
+    background-image: url('../img/fundoo.webp');
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     background-size: cover; /* Faz a imagem cobrir toda a área do elemento */
     background-position: center; /* Centraliza a imagem dentro do elemento */
