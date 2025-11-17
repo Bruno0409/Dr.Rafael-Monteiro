@@ -40,8 +40,28 @@
 }
 
 
-h1, h5 {
+h1 {
     font-family: 'Optima', sans-serif;
+    color: transparent;
+    font-weight: normal;
+    background: var(--gradiente-metalico);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+h3 {
+    font-family: 'Optima', sans-serif;
+    font-size: 24px;
+    color: transparent;
+    font-weight: normal;
+    background: var(--gradiente-metalico);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+}
+
+h2 {
+  font-family: 'Optima', sans-serif;
     color: transparent;
     font-weight: normal;
     background: var(--gradiente-metalico);
