@@ -212,41 +212,6 @@ i {
     border-image: linear-gradient(45deg, #696969, #e0e0e0, #979797) 1; /* Aplica o gradiente na borda */
 }
 
-
-/*** Hero Header ***/
-.hero-header {
-    margin-top: -100px;
-    padding-top: 50px;
-    background: url(../img/hero.webp?v=2) top center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    object-position: 5%;
-}
-
-h1.display {
-    margin-top: 150px;  /* Desce o título */
-    font-size: 2.9rem;
-}
-
-@media (max-width: 1024px) {
-    h1.display {
-        margin-top: 420px;  /* Adjust the margin-top for tablet screens */
-        font-size: 3.7rem;  /* Make the font size smaller for tablet screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-header {
-        background-position: 57% center;  /* Ajusta a imagem para mais à esquerda */
-        height: 100vh;
-
-    }
-    h1.display {
-        margin-top: 180px;  /* Adjusts the margin-top for better positioning */
-        font-size: 2.4rem;  /* Smaller font size for better readability */
-    }
-
-}
 /*** About Section ***/
 
 /* Ajusta a imagem para cobrir completamente a coluna, mas limita sua altura */
